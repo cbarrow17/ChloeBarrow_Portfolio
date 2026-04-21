@@ -8,6 +8,6 @@ Pages:
 - resume.html
 - contact.html
 
-Live Website URL: 
+Live Website URL: https://cbarrow17.github.io/ChloeBarrow_Portfolio/
 
 
