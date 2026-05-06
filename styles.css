@@ -1,13 +1,171 @@
 /* CSS by Chloe Barrow */
 /* Color Palette 
 linen= #FAF0E6
-neutral blue= #0E2F73
-bright blue=  #0339A6
-neutral pink= #E9A2F2
-light pink= #F1BBF2
+neutral blue= #9CBCC6
+deep blue=  #406B8C
+neutral orange= #EB8445
+deep magenta= #A4485E
 */
-
+* {
+    box-sizing: border-box;
+}
+ 
 /* GLOBAL (base) MOBILE FIRST */
 body {
     background-color: #FAF0E6;
+    font-family: serif;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
+ 
+/* HEADER */
+header {
+    grid-area: header;
+    background-color: #406B8C;
+    color: #FAF0E6;
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 5px solid #A4485E;
+}
+ 
+header h1 {
+    font-size: 2.5rem;
+    margin: 0 0 10px 0;
+}
+ 
+header p {
+    font-size: 1rem;
+    margin: 0;
+}
+ 
+/* NAV - FLEX */
+nav {
+    grid-area: nav;
+    background-color: #9CBCC6;
+}
+ 
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+ 
+nav ul li a {
+    display: block;
+    color: #FAF0E6;
+    text-decoration: none;
+    padding: 15px 15px;
+    font-family: sans-serif;
+    font-size: 1rem;
+}
+ 
+nav ul li a:hover {
+    background-color: #406B8C;
+    color: #EB8445;
+}
+ 
+/* MAIN*/
+main {
+    grid-area: main;
+    padding: 30px 20px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+ 
+/* SECTIONS - BOXED */
+section {
+    margin-bottom: 40px;
+    background-color: #ffffff;
+    border: 3px solid #A4485E;
+    padding: 25px;
+}
+ 
+section h2 {
+    font-size: 1.5rem;
+    color: #406B8C;
+    border-bottom: 2px solid #EB8445;
+    padding-bottom: 5px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+ 
+section h3 {
+    font-size: 1rem;
+    margin: 0 0 5px 0;
+    color: #333333;
+}
+ 
+section p {
+    margin: 0 0 10px 0;
+}
+ 
+section ul {
+    list-style: none;
+    padding-left: 0;
+}
+ 
+section ul li {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 2px solid #A4485E;
+    background-color: #FAF0E6;
+}
+ 
+/* IMAGES */
+img {
+    width: 250px;
+    display: block;
+    border: 3px solid #9CBCC6;
+    margin-bottom: 15px;
+}
+ 
+/* LINKS */
+a {
+    color: #406B8C;
+}
+ 
+a:hover {
+    color: #A4485E;
+}
+ 
+/* FOOTER */
+footer {
+    grid-area: footer;
+    background-color: #406B8C;
+    color: #FAF0E6;
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 0.75rem;
+    border-top: 5px solid #A4485E;
+}
+ 
+/* MEDIA QUERY - TABLET AND UP */
+@media (min-width: 600px) {
+    nav ul {
+        justify-content: center;
+    }
+ 
+    main {
+        padding: 40px;
+    }
+ 
+    section h2 {
+        font-size: 1.75rem;
+    }
+ 
 }
